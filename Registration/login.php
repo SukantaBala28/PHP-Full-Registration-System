@@ -1,4 +1,5 @@
 <?php include('index.php');?>
+<?php include('landingheader.php'); ?>
 <div class="container">
 	<hr/>
 	<h4 class="text-center">LOGIN FORM</h4>
@@ -23,3 +24,4 @@
 		</div>
 	</div>
 </div>
+<?php include('landingfooter.php'); ?>

@@ -1,3 +1,4 @@
-<?php include ('server.php'); ?>
-<?php include('landingheader.php'); ?>
-<?php include('landingfooter.php'); ?>
+<?php require('config/config.php'); ?>
+<?php require('config/db.php'); ?>
+<?php require ('server.php'); ?>
+<?php require ('styles.css'); ?>
