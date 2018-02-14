@@ -10,10 +10,17 @@
 <div class="container">
 	<h1>Posts</h1>
 	<?php foreach ($posts as $post):?> 
-		<div class="well" style="border: 1px solid #CCC;padding: 10px;margin-top: 10px;">
-			<h3><?php echo $post['title'];?></h3>
-			<small>Created at <?php echo $post['created_at'];?> by <?php echo $post['author'];?></small><br/>
-			<button class="btn btn-default"><a href="<?php echo ROOT_URL;?>postdetails.php?id=<?php echo $post['id'];?>">Read More</a></button>
+		<div class="row" style="border: 1px solid #CCC;padding: 10px;margin-top: 10px;">
+			<div col-md-4>
+				<div class="img_div">
+					<?php echo "<img src ='images/".$post['title_img']."' >";?>
+				</div>
+			</div>
+			<div col-md-8>
+				<h3><?php echo $post['title'];?></h3>
+				<small>Created at <?php echo $post['created_at'];?> by <?php echo $post['author'];?></small><br/>
+				<button class="btn btn-default"><a href="<?php echo ROOT_URL;?>postdetails.php?id=<?php echo $post['id'];?>">Read More</a></button>
+			</div>
 		</div>
 	<?php endforeach;?>
 </div>
