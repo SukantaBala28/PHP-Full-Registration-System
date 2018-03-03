@@ -11,12 +11,11 @@
 	<h1>Posts</h1>
 	<?php foreach ($posts as $post):?> 
 		<div class="row" style="border: 1px solid #CCC;padding: 10px;margin-top: 10px;">
-			<div col-md-4>
-				<div class="img_div">
-					<?php echo "<img src ='images/".$post['title_img']."' >";?>
-				</div>
+			<div class="col-md-4">
+				<?php echo "<img src ='images/".$post['title_img']."' >";?>
+				<!-- <h1>title</h1> -->
 			</div>
-			<div col-md-8>
+			<div class="col-md-8">
 				<h3><?php echo $post['title'];?></h3>
 				<small>Created at <?php echo $post['created_at'];?> by <?php echo $post['author'];?></small><br/>
 				<button class="btn btn-default"><a href="<?php echo ROOT_URL;?>postdetails.php?id=<?php echo $post['id'];?>">Read More</a></button>
@@ -25,3 +24,9 @@
 	<?php endforeach;?>
 </div>
 <?php include('landingfooter.php'); ?>
+<style type="text/css">
+	img {
+		width: 100%;
+		height: 40%;
+	}
+</style>

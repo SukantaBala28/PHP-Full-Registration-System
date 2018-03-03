@@ -1,6 +1,9 @@
 <?php
 	require('index.php');
 	$msg = "";
+	if (empty($_SESSION['email'])) {
+		header('location: login.php');
+	}
 	if(isset($_POST['submit'])) {
 		$image = $_FILES['image']['name'];
 	  	$target = "images/".basename($image);
@@ -20,7 +23,7 @@
 		}
 	};
 ?>
-<?php include('landingheader.php');?>
+<?php include('loginheader.php');?>
 <div class="container">
 	<h1>Add Post</h1>
 	<form method="POST" action="<?php $_SERVER['PHP_SELF'];?>" enctype="multipart/form-data">
